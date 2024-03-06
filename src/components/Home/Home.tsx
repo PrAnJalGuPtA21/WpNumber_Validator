@@ -29,14 +29,19 @@ const Home = () => {
           };
           fetchData();
     }, [])
+
     
   return (
-    <div className='form-container'>
+    <>
+        <h1 style={{textAlign:"center", color:"#29a329" }}>Whatsapp Number Validator</h1>
         <form className="form-data">
             <input type='text' className="inputfield" value={input} placeholder='type number to validate' onChange={e=>setInput(e.target.value)}/>
             <button>Search</button>
         </form>
-    </div>
+        <div className="result">
+
+        </div>
+    </>
   )
 }
 
