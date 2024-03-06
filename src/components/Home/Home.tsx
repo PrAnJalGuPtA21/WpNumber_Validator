@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import "./Home.css"
 const url = 'https://whatsapp-number-validator3.p.rapidapi.com/WhatsappNumberHasItWithToken';
 const Home = () => {
     const[ input, setInput] = useState<string>("");
@@ -30,9 +31,9 @@ const Home = () => {
     }, [])
     
   return (
-    <div>
+    <div className='form-container'>
         <form className="form-data">
-            <input type='text' value={input} placeholder='' onChange={e=>setInput(e.target.value)}/>
+            <input type='text' className="inputfield" value={input} placeholder='type number to validate' onChange={e=>setInput(e.target.value)}/>
             <button>Search</button>
         </form>
     </div>
